@@ -1,5 +1,3 @@
-const _ = require("lodash")
-
 const colors =
   [
     {name: "white",
@@ -978,10 +976,9 @@ const colors =
 
 export default function(){
   return {
-    colors: _.map(colors, (c) => {
+    colors: colors.map((c) => {
       c["style"]= `background-color: ${c.name};`
       return c
     }),
-    log: (color) => {console.log(color.name)}
   }
 }
